@@ -1,0 +1,86 @@
+﻿@model WorldNomadsTest.Models.ResultsViewModel
+@{
+    ViewBag.Title = "Results";
+}
+
+<h2>Results</h2>
+
+<div class="row">
+        <div class="col-lg-2" style="text-align:right">
+            Sequences for number: 
+        </div>
+        <div class="col-lg-10">
+            <strong>@Model.Number</strong>
+        </div>
+</div>
+<hr/>
+<div class="row">
+        
+        <div class="col-lg-2" style="text-align:right">
+            All numbers: 
+        </div>
+        <div class="col-lg-10">
+            <ul>
+            @foreach (var x in Model.AllNumbers)
+            {
+                <li>@x</li>
+            }
+            </ul>
+        </div>
+</div>
+<hr/>
+<div class="row">
+        <div class="col-lg-2" style="text-align:right">
+            All odd numbers: 
+        </div>
+        <div class="col-lg-10">
+            <ul>
+            @foreach (var x in Model.AllOddNumbers)
+            {
+                <li>@x</li>
+            }
+            </ul>
+        </div>
+</div>
+<hr/>
+<div class="row">
+        <div class="col-lg-2" style="text-align:right">
+            All even numbers: 
+        </div>
+        <div class="col-lg-10">
+            <ul>
+            @foreach (var x in Model.AllEvenNumbers)
+            {
+                <li>@x</li>
+            }
+            </ul>
+        </div>
+</div>
+<hr/>
+<div class="row">
+        <div class="col-lg-2" style="text-align:right">
+            All numbers with exceptions: 
+        </div>
+        <div class="col-lg-10">
+            <ul>
+            @foreach (var x in Model.AllNumbersMultiple)
+            {
+                <li>@x</li>
+            }
+            </ul>
+        </div>
+</div>
+<hr/>
+<div class="row">
+        <div class="col-lg-2" style="text-align:right">
+            Fibonacci: 
+        </div>
+        <div class="col-lg-10">
+            <ul>
+            @foreach (var x in Model.Fibonacci)
+            {
+                <li>@x</li>
+            }
+            </ul>
+        </div>
+</div>

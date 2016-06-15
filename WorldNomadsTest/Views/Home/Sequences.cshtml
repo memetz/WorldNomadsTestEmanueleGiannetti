@@ -1,0 +1,23 @@
+﻿@model WorldNomadsTest.Models.SequenceViewModel
+@{
+    ViewBag.Title = "Sequences";
+}
+
+<h2>Sequences</h2>
+@using (Html.BeginForm("Sequences", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="row">
+        <div class="col-lg-2" style="text-align:right">
+            @Html.LabelFor(m => m.Number)
+        </div>
+        <div class="col-lg-10">
+            @Html.TextBoxFor(m => m.Number)
+            @Html.ValidationMessageFor(m => m.Number)
+        </div>
+    </div>
+    <div class="row">
+        <input type="submit" value="Calculate"
+    </div>
+}
+    
+
